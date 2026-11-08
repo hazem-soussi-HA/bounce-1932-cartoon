@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BOUNCE! (1932) — A Hazem Picture</title>
+  <style>
+    :root {
+      --ink: #171310; --paper: #e9d9b0; --cream: #f6eacb; --red: #b5412d;
+      --gold: #ca9b4b; --wall: #2a2118;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(ellipse at 50% 0%, #3a2b1d 0%, #171310 55%, #0b0908 100%);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 18px 48px; }
+    header { text-align: center; margin-bottom: 18px; }
+    .eyebrow { color: var(--paper); letter-spacing: .28em; font-size: 12px; opacity: .85; }
+    h1 {
+      margin: 8px 0 2px; font-size: clamp(42px, 8vw, 82px); letter-spacing: .08em;
+      color: var(--cream); text-shadow: 4px 5px 0 var(--red);
+    }
+    .sub { color: var(--paper); margin: 0 0 6px; font-size: 20px; font-style: italic; }
+    .meta { color: #d8c59f; font-size: 13px; letter-spacing: .08em; }
+    .player-card {
+      margin: 22px auto 14px; background: rgba(246,234,203,.06);
+      border: 1px solid rgba(233,217,176,.22); border-radius: 12px;
+      padding: 14px; box-shadow: 0 18px 50px rgba(0,0,0,.45);
+    }
+    video {
+      width: 100%; max-height: 72vh; display: block; background: #000;
+      border-radius: 8px; border: 2px solid rgba(233,217,176,.18);
+    }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+    button, .btn {
+      appearance: none; border: 1px solid rgba(233,217,176,.35);
+      background: rgba(233,217,176,.08); color: var(--cream);
+      padding: 9px 14px; border-radius: 999px; cursor: pointer;
+      font: inherit; font-size: 14px; text-decoration: none;
+    }
+    button:hover, .btn:hover { background: rgba(181,65,45,.22); border-color: var(--red); }
+    button.active { background: var(--red); border-color: var(--red); color: #fff6e6; }
+    .status { margin-left: auto; color: #d8c59f; font-size: 13px; }
+    .grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; margin-top: 14px; }
+    .panel {
+      background: rgba(246,234,203,.05); border: 1px solid rgba(233,217,176,.18);
+      border-radius: 12px; padding: 16px 16px 14px;
+    }
+    h2 { margin: 0 0 10px; color: var(--gold); font-size: 18px; letter-spacing: .06em; }
+    p, li { line-height: 1.5; }
+    ul { margin: 8px 0 0 20px; padding: 0; }
+    .timeline { font-size: 14px; }
+    .timeline div { display: grid; grid-template-columns: 88px 1fr; gap: 8px; padding: 4px 0; border-bottom: 1px solid rgba(233,217,176,.08); }
+    .t { color: var(--gold); font-variant-numeric: tabular-nums; }
+    img.sheet { width: 100%; border-radius: 8px; border: 1px solid rgba(233,217,176,.15); margin-top: 8px; }
+    footer { text-align: center; color: #bda97c; margin-top: 18px; font-size: 13px; letter-spacing: .06em; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } .status { margin-left: 0; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">A &nbsp;H A Z E M&nbsp; P I C T U R E</div>
+      <h1>BOUNCE!</h1>
+      <p class="sub">starring Whiskers the Cat, with Squeak</p>
+      <div class="meta">1932 • 1:00 • 1280×960 / 960×720 • 24 fps • Mono-compatible stereo • Sepia rubber-hose cartoon</div>
+    </header>
+
+    <section class="player-card" aria-label="Video player">
+      <video id="v" controls preload="metadata" poster="poster.png">
+        <source id="src" src="BOUNCE_1932_720p.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+        <a href="BOUNCE_1932_720p.mp4">Download the video</a>.
+      </video>
+      <div class="controls">
+        <button id="play720" class="active" type="button">Play 720p (11 MB)</button>
+        <button id="playMaster" type="button">Play master 1280×960 (173 MB)</button>
+        <a class="btn" href="BOUNCE_1932_720p.mp4" download>Download 720p</a>
+        <a class="btn" href="BOUNCE_1932.mp4" download>Download master</a>
+        <span class="status" id="status">Loaded: 720p share copy</span>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>Synopsis</h2>
+        <p>Whiskers sleeps through his alarm, stretches, winds up the gramophone and dances a happy rubber-hose routine. Squeak sneaks out of the mouse hole, snatches the record and runs. The chase ends in a gramophone crash, a dazed count of stars — and the discovery that the wrecked gramophone makes a fine banjo. Cat and mouse finish with a duet, confetti and a tip of the boater.</p>
+        <h2 style="margin-top:14px">Storyboard</h2>
+        <img class="sheet" src="contact_sheet.png" alt="Storyboard contact sheet from BOUNCE! (1932)" />
+      </section>
+      <section class="panel">
+        <h2>Timeline</h2>
+        <div class="timeline">
+          <div><span class="t">0:00–0:04</span><span>Art-deco title; bouncing exclamation ball</span></div>
+          <div><span class="t">0:04–0:11</span><span>Whiskers asleep, alarm, stretch</span></div>
+          <div><span class="t">0:11–0:15</span><span>Gramophone wound; needle drop</span></div>
+          <div><span class="t">0:15–0:24</span><span>Dance &amp; “OH, I’M A HAPPY LITTLE CAT”</span></div>
+          <div><span class="t">0:24–0:33</span><span>Record theft, chase, fight cloud, crash</span></div>
+          <div><span class="t">0:33–0:38</span><span>Dazed stars; banjo discovered</span></div>
+          <div><span class="t">0:38–0:49</span><span>Cat-and-mouse jam (with a spin)</span></div>
+          <div><span class="t">0:49–0:54</span><span>Confetti finale, bow, hat tip</span></div>
+          <div><span class="t">0:54–1:00</span><span>Iris out; THE END; “Shave and a Haircut”</span></div>
+        </div>
+        <h2 style="margin-top:14px">Files</h2>
+        <ul>
+          <li><a class="btn" style="padding:2px 8px" href="BOUNCE_1932_720p.mp4">BOUNCE_1932_720p.mp4</a> — share copy</li>
+          <li><a class="btn" style="padding:2px 8px" href="BOUNCE_1932.mp4">BOUNCE_1932.mp4</a> — master</li>
+          <li><a class="btn" style="padding:2px 8px" href="poster.png">poster.png</a></li>
+          <li><a class="btn" style="padding:2px 8px" href="README.md">README.md</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>MCMXXXII • ALL TALKING • ALL DANCING • ALL BOUNCING</footer>
+  </div>
+
+  <script>
+    const v = document.getElementById('v');
+    const src = document.getElementById('src');
+    const status = document.getElementById('status');
+    const b720 = document.getElementById('play720');
+    const bm = document.getElementById('playMaster');
+    function load(file, label, btn) {
+      const t = v.currentTime || 0;
+      const playing = !v.paused;
+      src.src = file; v.load();
+      v.addEventListener('loadedmetadata', function once() {
+        v.removeEventListener('loadedmetadata', once);
+        try { v.currentTime = Math.min(t, v.duration || t); } catch(e) {}
+        if (playing) v.play().catch(()=>{});
+      });
+      status.textContent = 'Loaded: ' + label;
+      b720.classList.toggle('active', btn === b720);
+      bm.classList.toggle('active', btn === bm);
+    }
+    b720.onclick = () => load('BOUNCE_1932_720p.mp4', '720p share copy (960×720)', b720);
+    bm.onclick = () => load('BOUNCE_1932.mp4', 'master (1280×960, 173 MB)', bm);
+  </script>
+</body>
+</html>

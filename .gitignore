@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Large/generated media (GitHub 100MB limit / rebuild artifacts)
+BOUNCE_1932.mp4
+soundtrack.wav
+audio_analysis.png
+still_*.png
+preview_*.png
+
+# Local/server artifacts
+*.log
+nohup.out
